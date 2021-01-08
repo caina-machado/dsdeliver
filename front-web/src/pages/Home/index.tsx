@@ -1,6 +1,7 @@
 import "./styles.css";
 import { ReactComponent as MainImage } from "../../assets/home-img.svg";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,9 +16,9 @@ const Home = () => {
               Escolha o seu pedido e em poucos minutos <br /> levaremos na sua
               porta
             </h3>
-            <a className="home-btn-order" href="/">
+            <Link className="home-btn-order" to="/orders">
               FAZER PEDIDO
-            </a>
+            </Link>
           </div>
           <div className="home-image">
             <MainImage />
