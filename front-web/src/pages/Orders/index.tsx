@@ -27,6 +27,7 @@ const Orders = () => {
       })
       .catch((error) => {
         toast.warning("Erro ao listar produtos");
+        console.log(error);
       });
   }, []);
 
