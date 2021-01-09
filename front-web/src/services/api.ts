@@ -1,7 +1,7 @@
 import axios from "axios";
 import { OrderPayload } from "../pages/Orders/types";
 
-const BASE_URL = "https://caina-dsdeliver.herokuapp.com";
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
 
