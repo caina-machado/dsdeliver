@@ -1,4 +1,5 @@
 import axios from "axios";
+import { OrderPayload } from "../pages/Orders/types";
 
 const BASE_URL = "https://caina-dsdeliver.herokuapp.com";
 
@@ -12,4 +13,8 @@ export const fetchLocalMapBox = (local: string) => {
   return axios(
     `https://api.mapbox.com/geocoding/v5/mapbox.places/${local}.json?access_token=${mapboxToken}`
   );
+};
+
+export const saveOrder = (payload: OrderPayload) => {
+  return axios.post(`${BASE_URL}/orders`, payload);
 };
